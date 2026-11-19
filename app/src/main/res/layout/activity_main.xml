@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/casino_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- การ์ดหลักทรงหรูหรา -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="8dp"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <!-- หัวข้อแอป -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="🎰 บันทึกค่าใช้จ่าย 🎰"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/casino_gold"
+                android:layout_marginBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="จดทุกบาททุกสตางค์แบบสไตล์เวกัส 💎"
+                android:textSize="14sp"
+                android:textColor="@color/casino_text_secondary"
+                android:layout_marginBottom="20dp" />
+
+            <!-- ช่องกรอกจำนวนเงิน -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="โปรดใส่จำนวนเงิน (เป็นบาท)"
+                android:textColor="@color/casino_gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:inputType="numberDecimal"
+                android:hint="เช่น 100 หรือ 10.25"
+                android:textColor="@color/casino_text_white"
+                android:textColorHint="@color/casino_hint"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ช่องกรอกคำอธิบายรายการ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="คำอธิบายรายการ"
+                android:textColor="@color/casino_gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:inputType="text"
+                android:hint="เช่น ค่าข้าวกลางวัน"
+                android:textColor="@color/casino_text_white"
+                android:textColorHint="@color/casino_hint"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- แถวปุ่มปฏิบัติการ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <!-- ปุ่มเคลียร์ -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:text="เคลียร์"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_button_clear"
+                    android:textColor="@color/casino_neon_red" />
+
+                <!-- ปุ่มบันทึก -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:text="บันทึกรายการ"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_button_save"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!-- กล่องแสดงยอดรวมวันนี้ (อยู่ล่างสุด) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ยอดรวมวันนี้"
+                android:textColor="@color/casino_gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_total_card"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.00 บาท"
+                        android:textColor="@color/casino_neon_green"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/ic_menu_today"
+                        android:contentDescription="Icon Today"
+                        tools:ignore="UseAppTint" />
+                </LinearLayout>
+
+                <!-- ข้อความแสดงรายการล่าสุดที่เพิ่งเพิ่มเข้ามา -->
+                <TextView
+                    android:id="@+id/tvLastItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ยังไม่มีรายการที่เพิ่ม"
+                    android:textColor="@color/casino_text_secondary"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/casino_bg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp">
+
+    <!-- หัวข้อหน้าเกม -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="←"
+            android:textSize="20sp"
+            android:textColor="@color/casino_gold"
+            android:background="@drawable/bg_button_clear" />
+
+        <TextView
+            android:id="@+id/tvGameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="🐍 เกมงูกินแอปเปิ้ล 🍎"
+            android:textColor="@color/casino_gold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- คะแนน -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="คะแนนสะสม: 0 บาท 🍎"
+        android:textColor="@color/casino_neon_green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- กระดานเกม -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_card_rounded"
+        android:padding="4dp">
+
+        <com.example.expensenote_2.SnakeGameView
+            android:id="@+id/snakeGameView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- ปุ่มควบคุม (D-Pad Control) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+
+        <!-- ปุ่มขึ้น -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUp"
+            android:layout_width="60dp"
+            android:layout_height="46dp"
+            android:text="▲"
+            android:textSize="18sp"
+            android:textColor="@color/casino_gold"
+            android:background="@drawable/bg_button_clear" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <!-- ปุ่มซ้าย -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLeft"
+                android:layout_width="60dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="20dp"
+                android:text="◀"
+                android:textSize="18sp"
+                android:textColor="@color/casino_gold"
+                android:background="@drawable/bg_button_clear" />
+
+            <!-- ปุ่มขวา -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRight"
+                android:layout_width="60dp"
+                android:layout_height="46dp"
+                android:text="▶"
+                android:textSize="18sp"
+                android:textColor="@color/casino_gold"
+                android:background="@drawable/bg_button_clear" />
+        </LinearLayout>
+
+        <!-- ปุ่มลง -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDown"
+            android:layout_width="60dp"
+            android:layout_height="46dp"
+            android:text="▼"
+            android:textSize="18sp"
+            android:textColor="@color/casino_gold"
+            android:background="@drawable/bg_button_clear" />
+    </LinearLayout>
+
+    <!-- แถวปุ่มปฏิบัติการในเกม -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <!-- ปุ่มเริ่มใหม่ -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRestart"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="🔄 เริ่มเกมใหม่"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/casino_gold"
+            android:background="@drawable/bg_button_clear" />
+
+        <!-- ปุ่มถอนเงินรางวัล -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClaim"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1.2"
+            android:layout_marginStart="6dp"
+            android:text="💰 ถอนเงินรางวัล"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button_save" />
+    </LinearLayout>
+
+</LinearLayout>

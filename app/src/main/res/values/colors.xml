@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ธีมคาสิโน / เวแกส นีออน & ทอง (Casino Neon & Gold Theme) -->
+    <color name="casino_bg">#12121A</color>
+    <color name="casino_card_bg">#1D1B2A</color>
+    <color name="casino_gold">#FFD700</color>
+    <color name="casino_gold_dark">#FFB300</color>
+    <color name="casino_neon_red">#FF1744</color>
+    <color name="casino_neon_green">#00E676</color>
+    <color name="casino_input_bg">#2A273D</color>
+    <color name="casino_text_gold">#FFD700</color>
+    <color name="casino_text_white">#F5F5F7</color>
+    <color name="casino_text_secondary">#B0B0C3</color>
+    <color name="casino_hint">#6E6D8A</color>
+</resources>
